@@ -1,0 +1,119 @@
+# ─────────────────────────────────────────────────────────────
+#  SECURITY-CRITICAL — never commit these to a public repo
+# ─────────────────────────────────────────────────────────────
+
+# Credentials, keys, tokens
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+.env
+.env.*
+*.env
+secrets.*
+credentials.*
+config.local.*
+*_token*
+*_secret*
+*apikey*
+*api_key*
+.aws/
+.ssh/
+
+# Proprietary execution / operational code (kept private by policy)
+execution_engine*.py
+alpha_engine*.py
+market_data_gateway*.py
+ai_sentinel*.py
+nexus*.py
+broker*.py
+*killswitch*
+
+# ─────────────────────────────────────────────────────────────
+#  DATA — no raw or derived datasets in the public tree
+# ─────────────────────────────────────────────────────────────
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.db
+*.sqlite
+*.sqlite3
+cache/
+data/
+datasets/
+candles/
+
+# Generated reports (date-stamped runtime artifacts)
+sentinel_report_*.md
+*_audit_*.md
+reports/
+
+# ─────────────────────────────────────────────────────────────
+#  LOGS & RUNTIME
+# ─────────────────────────────────────────────────────────────
+*.log
+logs/
+*.out
+*.pid
+nohup.out
+
+# ─────────────────────────────────────────────────────────────
+#  PYTHON
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+quant_env/
+ENV/
+virtualenv/
+
+# ─────────────────────────────────────────────────────────────
+#  DATA SCIENCE / NOTEBOOKS
+# ─────────────────────────────────────────────────────────────
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+mlruns/
+.wandb/
+
+# ─────────────────────────────────────────────────────────────
+#  OS / EDITOR
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# ─────────────────────────────────────────────────────────────
+#  ALLOWLIST — keep only documentation
+# ─────────────────────────────────────────────────────────────
+!README.md
+!project_architecture.md
+!.gitignore
